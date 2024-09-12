@@ -1,16 +1,110 @@
+/* Background and container styles */
 body {
-    background-color: cadetblue;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Blue gradient background */
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Form and table styling */
 table {
-    color: brown;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid black;
-    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
 }
 
-input[type="submit"] {
-    background-color: aquamarine;
-    color: blue;
+caption {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #0072ff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    width: 40%;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="date"]:focus, select:focus, textarea:focus {
+    border-color: #0072ff;
+    outline: none;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Buttons */
+.btn {
+    width: 45%;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #0072ff;
+    border-color: #0072ff;
+}
+
+.btn-primary:hover {
+    background-color: #0056d2;
+    border-color: #0056d2;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        width: 100%;
+        text-align: left;
+    }
+
+    td {
+        margin-bottom: 10px;
+    }
+
+    caption {
+        font-size: 20px;
+    }
+
+    .btn {
+        width: 100%;
+    }
 }
